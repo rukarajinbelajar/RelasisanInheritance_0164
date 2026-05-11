@@ -26,3 +26,4 @@ void ibu::tambahAnak(){
     }
     cout << endl;
 }
+#endif
