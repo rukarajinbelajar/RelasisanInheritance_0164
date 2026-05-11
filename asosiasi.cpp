@@ -54,3 +54,26 @@ void dokter::cetakPasien(){
     }
     cout << endl;
 }
+
+int main(){
+    dokter* varDokter1 = new dokter("dr.Budi");
+    dokter* varDokter2 = new dokter("dr.Tono");
+    dokter* varPasien1 = new dokter("Andi");
+    dokter* varPasien2 = new dokter("Lia");
+
+    varDokter1->tambahPasien(varPasien1);
+    varDokter1->tambahPasien(varPasien2);
+    varDokter2->tambahPasien(varPasien1);
+
+    varDokter1->cetakPasien();
+    varDokter2->cetakPasien();
+    varPasien1->cetakPasien();
+    varPasien2->cetakPasien();
+
+    delete varPasien1;
+    delete varPasien1;
+    delete varDokter1;
+    delete varDokter2;
+
+    return 0;
+}
