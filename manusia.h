@@ -1,11 +1,17 @@
-#include <iostream>
-#include <string>
+#ifndef MANUSIA_H
+#define MANUSIA_H
 using namespace std;
 
-#include "jantung.h"
-#include "manusia.h"
+class manusia {
+public:
+    string name;
+    jantung varJantung;
 
-int main()
-{
-    manusia *varManusia = new manusia("Markus");
-}
+    manusia(string pName) : name(pName) {
+        cout << name << "hidup\n";
+    }
+    ~manusia() {
+        cout << name << "mati\n";
+    }
+};
+#endif
