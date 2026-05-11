@@ -8,7 +8,7 @@ public:
     string nama;
     vector<dokter*> daftar_dokter;
     pasien(string pNama) :nama(pNama){
-        cout << "Pasien \"" << nama << "\" tidak ada\n";
+        cout << "Pasien \"" << nama << "\" ada\n";
     }
     ~pasien(){
         cout << "Pasien \"" << nama << "\" tidak ada\n";
@@ -17,4 +17,17 @@ public:
     void cetakDokter();
 };
 
-class dokter
+class dokter{
+public:
+    string nama;
+    vector<pasien*> daftar_pasien;
+
+    dokter(string pNama) :nama(pNama){
+        cout << "Dokter \"" << nama << "\" ada\n";
+    }
+    ~dokter(){
+        cout << "Dokter \"" << nama << "\" tidak ada\n";
+    }
+
+    
+}
